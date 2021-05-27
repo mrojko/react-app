@@ -61,3 +61,8 @@ jobs:
       - name: Deploy to production
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx surge --project ./build --domain outstanding-brick.surge.sh
+      - name: Upload Coverage Code
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: npx codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
