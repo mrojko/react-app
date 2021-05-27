@@ -618,7 +618,9 @@ const core = __webpack_require__(470)
 const github = __webpack_require__(469)
 
 try{
-    //throw(new Error("Some error meessage"))
+    core.debug('debug message')
+    core.warning('Warning message')
+    core.error('Error message')
 
     const name = core.getInput('who-to-greet')
     console.log('Hello ${name}')
