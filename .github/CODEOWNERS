@@ -1,0 +1,4 @@
+* @mrojko
+*.js @mrojko
+*.yml @mrojko
+/public/ @mrojko
